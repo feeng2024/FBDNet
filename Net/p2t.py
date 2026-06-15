@@ -381,7 +381,7 @@ class Encoder_p2t_base(nn.Module):
         super(Encoder_p2t_base,self).__init__()
 
         self.encoder = p2t_base()
-        self.encoder.load_state_dict(torch.load('/home/server/zpf/best_code_cod/Pred_model/p2t_base.pth', map_location='cpu'),
+        self.encoder.load_state_dict(torch.load('./Checkpoints/p2t_base.pth', map_location='cpu'),
                                      strict=False)
     def forward(self, x):
         out = self.encoder(x)
@@ -391,7 +391,7 @@ class Encoder_p2t_small(nn.Module):
     def __init__(self):
         super(Encoder_p2t_small,self).__init__()
         self.encoder = p2t_small()
-        self.encoder.load_state_dict(torch.load('/home/server/zpf/best_code_cod/Pred_model/p2t_small.pth', map_location='cpu'),
+        self.encoder.load_state_dict(torch.load('./Checkpoints/p2t_small.pth', map_location='cpu'),
                                      strict=False)
     def forward(self, x):
         out = self.encoder(x)
@@ -401,7 +401,7 @@ class Encoder_p2t_tiny(nn.Module):
     def __init__(self):
         super(Encoder_p2t_tiny,self).__init__()
         self.encoder = p2t_tiny()
-        self.encoder.load_state_dict(torch.load('/home/server/zpf/best_code_cod/Pred_model/p2t_tiny.pth', map_location='cpu'),
+        self.encoder.load_state_dict(torch.load('./Checkpoints/p2t_tiny.pth', map_location='cpu'),
                                      strict=False)
     def forward(self, x):
         out = self.encoder(x)
@@ -411,7 +411,7 @@ class Encoder_p2t_large(nn.Module):
     def __init__(self):
         super(Encoder_p2t_large,self).__init__()
         self.encoder = p2t_large()
-        self.encoder.load_state_dict(torch.load('./Pred_model/jiance/p2t_large.pth', map_location='cpu'),strict=False)
+        self.encoder.load_state_dict(torch.load('./Checkpoints/p2t_large.pth', map_location='cpu'),strict=False)
     def forward(self, x):
         out = self.encoder(x)
         return out[::-1]
