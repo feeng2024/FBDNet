@@ -64,7 +64,7 @@ Net/p2t.py
 
 The trained model checkpoint can be downloaded from:
 
-> [Model download link]
+> [https://github.com/yuhuan-wu/P2T]
 
 
 ## Training
