@@ -49,7 +49,7 @@ Dataset/
         └── GT/
 ```
 
-Please ensure that each image and its ground-truth mask have the same filename.
+You can find these datasets [here](https://github.com/lartpang/awesome-segmentation-saliency-dataset#camouflaged-object-detection-cod).
 
 ## Pretrained Models
 
