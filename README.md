@@ -75,12 +75,6 @@ Configure the dataset and checkpoint paths in `MyTrain.py`, and then run:
 python MyTrain.py
 ```
 
-The default backbone is P2T-Large. A full-model checkpoint can also be loaded using:
-
-```bash
-python MyTrain.py 
-```
-
 ## Testing
 
 Configure the model and dataset paths in `MyTest.py`, and run:
