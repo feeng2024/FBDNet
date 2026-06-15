@@ -51,20 +51,21 @@ Dataset/
 
 You can find these datasets [here](https://github.com/lartpang/awesome-segmentation-saliency-dataset#camouflaged-object-detection-cod).
 
-## Pretrained Models
 
-The network supports P2T and PVTv2 backbones.
+## Pretrained Backbone
 
-Please place the pretrained backbone weights in the `Checkpoints/` directory and configure their paths in:
+We use **P2T-Large** as the backbone network.
+
+Please download the ImageNet-pretrained P2T-Large weights, place them in the `Checkpoints/` directory, and configure the weight path in:
 
 ```text
 Net/p2t.py
-Net/PVTv2.py
 ```
 
-The trained model weights can be downloaded from:
+The trained model checkpoint can be downloaded from:
 
 > [Model download link]
+
 
 ## Training
 
