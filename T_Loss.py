@@ -34,11 +34,6 @@ class TFM_loss(nn.Module):
 
         triple_loss = torch.relu(0.5 + pos_pair - neg_pair)
 
-        res=triple_loss
+        triple_loss
 
-        forepixel = input_F
-        forepixel = forepixel.clone().reshape(B, -1)
-        forepixel = forepixel.mean(1)
-        loss = res + forepixel 
-        loss = loss.mean(0)
-        return loss
+        return triple_loss
