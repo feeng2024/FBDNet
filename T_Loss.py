@@ -21,7 +21,7 @@ class TFM_loss(nn.Module):
         super(TFM_loss, self).__init__()
 
 
-    def forward(self, input_F,input_P,input_B):#def forward(self, input_F,input_P,input_B):
+    def forward(self, input_F,input_P,input_B):
         B, C, H ,W = input_F.shape
         in_F = input_F.mean(1,keepdim=True).reshape(B, -1)
         in_P = input_P.reshape(B, -1)
@@ -33,7 +33,5 @@ class TFM_loss(nn.Module):
         pos_pair = torch.diagonal(dis_pos, dim1=0, dim2=1)
 
         triple_loss = torch.relu(0.5 + pos_pair - neg_pair)
-
-        triple_loss
 
         return triple_loss
