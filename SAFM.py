@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 
-
 def position(H, W, is_cuda=True):
     if is_cuda:
         loc_w = torch.linspace(-1.0, 1.0, W).cuda().unsqueeze(0).repeat(H, 1)
